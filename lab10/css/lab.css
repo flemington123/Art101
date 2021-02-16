@@ -1,0 +1,68 @@
+h1 {
+  font-family: "arial";
+  text-indent: 550px;
+  font-size: 200%;
+}
+h2 {
+  color: red;
+  text-indent: 450px;
+  font-size: 100%;
+}
+h3 {
+  text-indent: 50px;
+  font-size: 100%;
+}
+
+p{
+  font-family: "arial";
+  text-indent: 20px;
+  margin-left: 10px;
+}
+
+
+#challenges{
+  background-color: #DCDCDC;
+  width: 1300px;
+  min-height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: solid 3px #444444;
+  font-size: 20px;
+}
+#problems{
+  background-color: #DCDCDC;
+  width: 1300px;
+  min-height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: solid 3px #444444;
+  font-size: 20px;
+}
+#results{
+  background-color: #DCDCDC;
+  width: 1300px;
+  min-height: 200px;
+  padding: 10px;
+  margin: 10px;
+  border: solid 3px #444444;
+  font-size: 20px;
+}
+#output1{
+  background-color: #CDBE70;
+  width: 1400px;
+  min-height: 150px;
+  padding: 10px;
+  margin: 10px;
+  border: solid 3px #444444;
+  font-size: 20px;
+}
+#output{
+  background-color: #CDBE70;
+
+  width: 1100px;
+  min-height: 150px;
+  padding: 10px;
+  margin: 10px;
+  border: solid 3px #444444;
+  font-size: 20px;
+}
