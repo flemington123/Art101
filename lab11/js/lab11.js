@@ -9,6 +9,7 @@
 // challenges
 $("button.challenges").click(function(){
   $("#challenges").toggleClass("red");
+  $(".problems").toggleClass("red");
   $("#challenges").fadeIn("3000");
   $("#problems").fadeOut("3000");
   $("#results").fadeIn("3000");
@@ -16,6 +17,7 @@ $("button.challenges").click(function(){
 // problems
 $("button.problems").click(function(){
   $("#problems").toggleClass("green");
+  $(".results").toggleClass("green");
   $("#problems").fadeIn("3000");
   $("#results").fadeOut("3000");
   $("#challenges").fadeIn("3000");
@@ -23,6 +25,7 @@ $("button.problems").click(function(){
 // results
 $("button.results").click(function(){
   $("#results").toggleClass("blue");
+  $(".challenges").toggleClass("blue");
   $("#results").fadeIn("3000");
   $("#challenges").fadeOut("3000");
   $("#problems").fadeIn("3000");
@@ -32,4 +35,7 @@ $("button.reset").click(function(){
   $("#results").show();
   $("#challenges").show();
   $("#problems").show();
+  $(".challenges").toggleClass("black");
+  $(".problems").toggleClass("black");
+  $(".results").toggleClass("black");
 });
