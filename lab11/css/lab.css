@@ -76,6 +76,9 @@ p{
 .blue{
   color: blue;
 }
+.black{
+  color: black;
+}
 #target {
   font-weight: bold;
   font-size: 60px;
