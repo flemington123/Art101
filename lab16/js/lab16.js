@@ -1,33 +1,47 @@
 /*
  * Author: Xuqi Wang
- * Created: 4 Mar 2021
+ * Created: 6 Mar 2021
  * Licensse: Public Domain
  */
 
 
- $.ajax({
-     // The URL for the request (from the api docs)
-     url: "https://yourapiendpoint.com/",
-     // The data to send (will be converted to a query string)
-     data: {
-             // here is where any data required by the api
-             //   goes (check the api docs)
-             id: 123,
-             api_key: "blahblahblah",
-           },
-     // Whether this is a POST or GET request
-     type: "GET",
-     // The type of data we expect back
-     dataType : "json",
-     // What do we do when the api call is successful
-     //   all the action goes in here
-     success: function(data) {
-         // do stuff
-         console.log(data);
-     },
-     // What we do if the api call fails
-     error: function (jqXHR, textStatus, errorThrown) {
-         // do stuff
-         console.log("Error:", textStatus, errorThrown);
-     }
- })
+ var apiEndpoint = "https://xkcd.now.sh/?comic=latest"
+
+ $("#activate").click(API);
+
+ function putText(text){
+   $("#output").html(text);
+ }
+ function API(){
+   $.ajax({
+       // The URL for the request (from the api docs)
+       url: apiEndpoint,
+       // The data to send (will be converted to a query string)
+       data: {
+
+             },
+       // Whether this is a POST or GET request
+       type: "GET",
+       // The type of data we expect back
+       dataType : "json",
+
+       // success
+       success: function(data){
+         var textData = JSON.stringify(data);
+         var str = "";
+         var imageURL = data.img;
+         var title = data.title;
+
+         str += "<h1>" + title + "</h1>";
+         str += "<img src ='" + imageURL + "'>"
+         console.log("This is data:", textData)
+         putText(str);
+       },
+
+       // error
+       error: function(xhr, status, errorThrown){
+         console.log("Failed.");
+         putText(errorThrown + " Status:" + status);
+       }
+   })
+ }
